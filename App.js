@@ -57,7 +57,7 @@ export default class App extends React.Component {
                     duration.minutes() === 0 &&
                     duration.hours() === 0
                 ) {
-                    clearInterval(this.interval);
+                    this._resetTimer();
                     this._alertUser();
                 }
             }, tick);
